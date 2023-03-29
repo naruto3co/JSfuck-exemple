@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang web có lỗ hổng về JSFuck</title>
+</head>
+<body>
+	<h1>Trang web có lỗ hổng về JSFuck</h1>
+	<p>Chào mừng đến với trang web của chúng tôi!</p>
+	<p>Bạn có thể nhập vào một đoạn mã JavaScript và nó sẽ được thực thi:</p>
+	<form>
+		<label for="input">Đoạn mã JavaScript:</label>
+		<textarea id="input" name="input"></textarea>
+		<button onclick="executeInput()">Thực thi</button>
+	</form>
+	<p id="output"></p>
+
+	<script>
+		function executeInput() {
+			const inputField = document.getElementById('input');
+			const output = document.getElementById('output');
+			const input = inputField.value.toUpperCase();
+			eval(input);
+		}
+	</script>
+	
+	<div> JSFuck cái này 
+	[]["filter"]["constructor"]( "alert('XSS')" )()
+	</div>
+	
+</body>
+</html>
+
+
